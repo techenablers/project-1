@@ -1,13 +1,17 @@
 import React from "react";
 import logo from "./assets/logo.png";
 import JoinNow from "./components/join-now/join-now";
+import LogIn from "./components/LogIn";
 import "./styles/porfile-page.css";
 
 const NavHeader = (props) => {
-  const { setModalOpen, isModalOpen } = props;
+  const { setModalOpen, isModalOpen, isLogInModalOpen, setIsLogInModalOpen } =
+    props;
   console.log({ isModalOpen });
-  const hnadleLogIn = () => {};
-  const handleJoinNow = () => {
+  const handelLogIn = () => {
+    setIsLogInModalOpen(true);
+  };
+  const handelJoinNow = () => {
     console.log("i am joining Now ");
     setModalOpen(true);
   };
@@ -55,7 +59,7 @@ const NavHeader = (props) => {
                 </a>
               </li>
               <li className="nav-item">
-                <button className="login" type="submit " onClick={hnadleLogIn}>
+                <button className="login" type="submit " onClick={handelLogIn}>
                   LogIn
                 </button>
               </li>
@@ -63,7 +67,7 @@ const NavHeader = (props) => {
                 <button
                   className="joinTopbutton"
                   type="submit "
-                  onClick={handleJoinNow}
+                  onClick={handelJoinNow}
                 >
                   {" "}
                   Join Now
@@ -74,6 +78,7 @@ const NavHeader = (props) => {
         </div>
       </nav>
       {isModalOpen && <JoinNow />}
+      {isLogInModalOpen && <LogIn />}
     </div>
   );
 };
