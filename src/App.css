@@ -1,16 +1,28 @@
 /* Modal styles */
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+#root {
+  width: 100%;
+}
+body {
+  min-height: 100vh;
+
+  -ms-overflow-style: none;
+}
 .join-now {
   font-size: 15px;
   font-weight: 600;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   /* border: 1px solid #FCB503; */
   background-color: #ffe000;
   color: black;
   padding: 5px 15px;
   text-align: center;
   text-decoration: none;
-  transition: .8s;
+  transition: 0.8s;
   /* text-shadow: 0 2px 2px rgb(0 0 0 / 30%); */
   border-radius: 20px;
 }
-

@@ -1,0 +1,48 @@
+.login {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif; /* Ensure fallback font is provided */
+  background-color: white;
+  color: black;
+  padding: 5px 28px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.8s;
+  margin-right: 15px;
+  border-radius: 20px;
+}
+
+.header-container {
+  background-color: #000;
+  min-height: 80px; /* Remove quotes around numeric values */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.joinTopbutton {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  background-color: #ffe000;
+  color: black;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.8s;
+  border-radius: 20px;
+}
+
+.navItems {
+  font-family: "Roboto", sans-serif;
+  color: rgba(255, 255, 255, 0.9) !important;
+  transition: 0.3s;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  white-space: pre-line;
+  vertical-align: bottom;
+  /* width: 20px;  */
+  /* position: relative; */
+  /* right: 10px; */
+}
