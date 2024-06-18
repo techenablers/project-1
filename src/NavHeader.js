@@ -1,14 +1,15 @@
 import React from "react";
 import logo from "./assets/logo.png";
+import JoinNow from "./components/join-now/join-now";
 import "./styles/porfile-page.css";
 
 const NavHeader = (props) => {
-  const { setModalOpen } = props;
-  const hnadleLogIn = () => {
-    setModalOpen(true)
-  };
+  const { setModalOpen, isModalOpen } = props;
+  console.log({ isModalOpen });
+  const hnadleLogIn = () => {};
   const handleJoinNow = () => {
     console.log("i am joining Now ");
+    setModalOpen(true);
   };
   return (
     <div>
@@ -42,6 +43,7 @@ const NavHeader = (props) => {
           </button>
         </div>
       </header>
+      {isModalOpen && <JoinNow />}
     </div>
   );
 };
