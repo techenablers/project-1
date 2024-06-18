@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import JoinNow from './components/join-now/join-now';
 import './App.css';
+import NavHeader from './NavHeader';
 
 const App = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -10,8 +11,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <button onClick={openModal} className='join-now'>Join Now</button>
-      <JoinNow isModalOpen={isModalOpen} closeModal={closeModal} />
+      {/* <button onClick={openModal} className='join-now'>Join Now</button>
+      <JoinNow isModalOpen={isModalOpen} closeModal={closeModal} /> */}
+      <NavHeader/>
     </div>
   );
 };
