@@ -13,36 +13,66 @@ const NavHeader = (props) => {
   };
   return (
     <div>
-      <header className="header-container">
-        <div style={{ marginLeft: "70px" }}>
-          <img src={logo} alt="logo" width="150px" />
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            marginRight: "50px",
-            // justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <p className="navItems">HOME</p>
-          <p className="navItems">GAMING AREAS</p>
-          <p className="navItems">ONGOING PROMOTIONS</p>
-          <p className="navItems">OUR NEWS</p>
-          <button className="login" type="submit " onClick={hnadleLogIn}>
-            LogIn
-          </button>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">
+            <img src={logo} alt="logo" width="150px" />
+          </a>
           <button
-            className="joinTopbutton"
-            type="submit "
-            onClick={handleJoinNow}
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-            {" "}
-            Join Now
+            <span className="navbar-toggler-icon"></span>
           </button>
+          <div
+            className="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="#">
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  GAMING AREAS
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  ONGOING PROMOTIONS
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  OUR NEWS
+                </a>
+              </li>
+              <li className="nav-item">
+                <button className="login" type="submit " onClick={hnadleLogIn}>
+                  LogIn
+                </button>
+              </li>
+              <li className="nav-item">
+                <button
+                  className="joinTopbutton"
+                  type="submit "
+                  onClick={handleJoinNow}
+                >
+                  {" "}
+                  Join Now
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
-      </header>
+      </nav>
       {isModalOpen && <JoinNow />}
     </div>
   );

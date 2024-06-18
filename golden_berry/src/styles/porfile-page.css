@@ -42,6 +42,8 @@
   font-weight: 600;
   white-space: pre-line;
   vertical-align: bottom;
+  position: relative;
+  
   /* width: 20px;  */
   /* position: relative; */
   /* right: 10px; */
