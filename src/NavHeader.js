@@ -2,9 +2,10 @@ import React from "react";
 import logo from "./assets/logo.png";
 import "./styles/porfile-page.css";
 
-const NavHeader = () => {
+const NavHeader = (props) => {
+  const { setModalOpen } = props;
   const hnadleLogIn = () => {
-    console.log("i am logging in ");
+    setModalOpen(true)
   };
   const handleJoinNow = () => {
     console.log("i am joining Now ");
@@ -21,7 +22,7 @@ const NavHeader = () => {
             display: "flex",
             marginRight: "50px",
             // justifyContent: "space-between",
-            alignItems:'center'
+            alignItems: "center",
           }}
         >
           <p className="navItems">HOME</p>

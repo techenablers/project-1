@@ -13,7 +13,7 @@ const App = () => {
     <div className="App">
       {/* <button onClick={openModal} className='join-now'>Join Now</button>
       <JoinNow isModalOpen={isModalOpen} closeModal={closeModal} /> */}
-      <NavHeader/>
+      <NavHeader setModalOpen={setModalOpen}/>
     </div>
   );
 };
