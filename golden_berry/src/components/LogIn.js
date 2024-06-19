@@ -60,6 +60,7 @@ const LogIn = (props) => {
             onChange={handleChange}
             value={loginDetails.userName}
             name="userName"
+            style={{backgroundColor:'#ced4da'}}
           />
           <label style={{ color: "#fff" }}>PASSWORD </label>
           <input
@@ -67,6 +68,7 @@ const LogIn = (props) => {
             onChange={handleChange}
             value={loginDetails.password}
             name="password"
+            style={{backgroundColor:'#ced4da'}}
           />
           <button className="join-now" onSubmit={handleLogin}>
             LOGIN

@@ -47,11 +47,12 @@ const JoinNow = ({ isModalOpen, closeModal }) => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "flex-start",
-            alignItems: "flex-start",
+            alignItems: "flex-start", 
+            width:'90%'
           }}
         >
           <label style={{ color: "#fff" }}>country* </label>
-          <input type="text" />
+          <input type="text"  style={{width:'90%'}}/>
           <label style={{ color: "#fff" }}>Mobile Number * </label>
           <input type="text" />
           <button className="join-now">PROCEED</button>
