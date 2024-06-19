@@ -47,7 +47,7 @@ const LogIn = () => {
           <p>Legal Information</p>
         </div>
       </div>
-      <div className="col-12 col-lg-6 col-md-6 col-sm-6">
+      <div className="col-12 col-lg-6 col-md-6 col-sm-6" style={{position:'relative', marginBottom:'130px'}}>
         <FontAwesomeIcon
           icon={faKey}
           style={{ color: "#E5881B", fontSize: '50px' }}
