@@ -43,8 +43,30 @@
   white-space: pre-line;
   vertical-align: bottom;
   position: relative;
-  
+
   /* width: 20px;  */
   /* position: relative; */
   /* right: 10px; */
+}
+
+.join-now {
+  position: relative;
+  top:15px;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  font-weight: 600;
+  background: rgb(252, 181, 3);
+  background: linear-gradient(
+    180deg,
+    rgb(252, 181, 3) 0%,
+    rgba(229, 136, 27, 1) 50%
+  ); /* Gradient background */
+  font-size: 15px;
+  color: #fff;
+  padding: 8px 25px;
+  text-align: center;
+  border-radius: 50px;
+  border: none;
+  text-decoration: none;
+  margin: 0 auto;
 }

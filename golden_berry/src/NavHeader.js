@@ -19,9 +19,7 @@ const NavHeader = (props) => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            <img src={logo} alt="logo" width="150px" />
-          </a>
+          <img src={logo} alt="logo" width="150px" />
           <button
             className="navbar-toggler"
             type="button"
