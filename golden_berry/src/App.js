@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import JoinNow from "./components/join-now/join-now";
 import "./App.css";
-import NavHeader from "./NavHeader";
-import LogIn from "./components/LogIn";
+import NavHeader from "./components/nav-bar/NavHeader";
+import LogIn from "./components/login/LogIn";
 
 const App = () => {
   const [isModalOpen, setModalOpen] = useState(false);

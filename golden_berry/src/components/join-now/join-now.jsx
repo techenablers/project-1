@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faHouse } from '@awesome.me/kit-KIT_CODE/icons/classic/solid'
 import { faLock } from "@fortawesome/free-solid-svg-icons";
-import "./join-now.css";
+import "../../styles/join-now.css";
 
 const JoinNow = ({ isModalOpen, closeModal }) => {
-  console.log({ isModalOpen });
-  console.log("i am model");
   const [countryCode, setCountryCode] = useState("+91");
 
   const handleCountryChange = (event) => {
@@ -15,48 +12,47 @@ const JoinNow = ({ isModalOpen, closeModal }) => {
       india: "+91",
       usa: "+1",
       uk: "+44",
-      // Add more countries and codes as needed
     };
     setCountryCode(countryCodeMap[selectedCountry]);
   };
 
   return (
-    <div
-      className="modal-dialog modal-dialog-centered"
-      style={{
-        display: "flex",
-        flexDirection:'column',
-        justifyContent:'center',
-        backgroundColor: "#212529",
-        width: "500px",
-        height: "550px",
-      }}
-    >
-      <FontAwesomeIcon
-        icon={faLock}
-        style={{ color: "#E5881B", fontSize: "50px" }}
-      />
-      <h1 style={{ color: "#E5881B " }}>JOIN NOW</h1>
-      <div className=" ">
-        <form
-          style={{
-            // textAlign: "left",
-            // marginLeft: "20px",
-            // position: "relative",
-            // top: "10PX",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "flex-start",
-            alignItems: "flex-start", 
-            width:'90%'
-          }}
-        >
-          <label style={{ color: "#fff" }}>country* </label>
-          <input type="text"  style={{width:'90%'}}/>
-          <label style={{ color: "#fff" }}>Mobile Number * </label>
-          <input type="text" />
-          <button className="join-now">PROCEED</button>
-        </form>
+    <div className="modal">
+      <div className="modal-content">
+        <div className="modal-header">
+          <span className="closeBtn" onClick={closeModal}>
+            &times;
+          </span>
+        </div>
+        <div className="modal-body">
+          <FontAwesomeIcon
+            icon={faLock}
+            style={{ color: "#E5881B", fontSize: "50px" }}
+          />
+          <h1 style={{ color: "#E5881B ", margin: "1rem 0" }}>JOIN NOW</h1>
+          <form id="joinForm" className="joinForm">
+            <label htmlFor="country">Country *</label>
+            <select id="country" name="country" onChange={handleCountryChange} className="selectCountry">
+              <option value="india">India</option>
+              <option value="usa">USA</option>
+              <option value="uk">UK</option>
+            </select>
+
+            <label htmlFor="mobile">Mobile Number *</label>
+            <div className="mobileNumber">
+              {/* <input type="text" id="countryCode" value={countryCode} readOnly /> */}
+              <div>{countryCode}</div>
+              <input
+                type="text"
+                id="mobile"
+                name="mobile"
+                placeholder="XXX XXX XXX"
+              />
+            </div>
+
+            <button type="submit" className="join-now proceed">Proceed</button>
+          </form>
+        </div>
       </div>
     </div>
   );

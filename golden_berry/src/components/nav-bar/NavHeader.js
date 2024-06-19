@@ -1,8 +1,8 @@
 import React from "react";
-import logo from "./assets/logo.png";
-import JoinNow from "./components/join-now/join-now";
-import LogIn from "./components/LogIn";
-import "./styles/porfile-page.css";
+import logo from "../../assets/logo.png";
+import JoinNow from "../join-now/join-now";
+import LogIn from "../login/LogIn";
+import "../../styles/porfile-page.css";
 
 const NavHeader = (props) => {
   const { setModalOpen, isModalOpen, isLogInModalOpen, setIsLogInModalOpen } =
@@ -64,7 +64,7 @@ const NavHeader = (props) => {
               <li className="nav-item">
                 <button
                   className="joinTopbutton"
-                  type="submit "
+                  type="button"
                   onClick={handelJoinNow}
                 >
                   {" "}
@@ -75,7 +75,7 @@ const NavHeader = (props) => {
           </div>
         </div>
       </nav>
-      {isModalOpen && <JoinNow />}
+      {isModalOpen && <JoinNow isModalOpen={isModalOpen} />}
       {isLogInModalOpen && <LogIn setIsLogInModalOpen={setIsLogInModalOpen}/>}
     </div>
   );
