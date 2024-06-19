@@ -1,29 +1,11 @@
-import React, { useState } from "react";
-import JoinNow from "./components/join-now/join-now";
+import React from "react";
 import "./App.css";
 import NavHeader from "./components/nav-bar/NavHeader";
-import LogIn from "./components/login/LogIn";
 
-const App = () => {
-  const [isModalOpen, setModalOpen] = useState(false);
-  const [isLogInModalOpen, setIsLogInModalOpen] = useState(false);
-
-  const openModal = () => setModalOpen(true);
-  const closeModal = () => setModalOpen(false);
-
-  return (
-    <div className="App">
-      {/* <button onClick={openModal} className='join-now'>Join Now</button>
-      <JoinNow isModalOpen={isModalOpen} closeModal={closeModal} /> */}
-      <NavHeader
-        setModalOpen={setModalOpen}
-        isModalOpen={isModalOpen}
-        setIsLogInModalOpen={setIsLogInModalOpen}
-        isLogInModalOpen={isLogInModalOpen}
-      />
-      {/* <LogIn/> */}
-    </div>
-  );
-};
+const App = () => (
+  <div className="App">
+    <NavHeader />
+  </div>
+);
 
 export default App;

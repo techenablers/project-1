@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../../styles/porfile-page.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faHouse } from '@awesome.me/kit-KIT_CODE/icons/classic/solid'
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { faKey } from "@fortawesome/free-solid-svg-icons";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";

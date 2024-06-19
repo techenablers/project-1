@@ -1,20 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/logo.png";
 import JoinNow from "../join-now/join-now";
 import LogIn from "../login/LogIn";
 import "../../styles/porfile-page.css";
 
-const NavHeader = (props) => {
-  const { setModalOpen, isModalOpen, isLogInModalOpen, setIsLogInModalOpen } =
-    props;
-  console.log({ isModalOpen });
-  const handelLogIn = () => {
-    setIsLogInModalOpen(true);
-  };
-  const handelJoinNow = () => {
-    console.log("i am joining Now ");
-    setModalOpen(true);
-  };
+const NavHeader = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [isLogInModalOpen, setIsLogInModalOpen] = useState(false);
+
+  const handleLogIn = () => setIsLogInModalOpen(true);
+  const handleJoinNow = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -57,7 +54,7 @@ const NavHeader = (props) => {
                 </a>
               </li>
               <li className="nav-item">
-                <button className="login" type="submit " onClick={handelLogIn}>
+                <button className="login" type="submit " onClick={handleLogIn}>
                   LogIn
                 </button>
               </li>
@@ -65,7 +62,7 @@ const NavHeader = (props) => {
                 <button
                   className="joinTopbutton"
                   type="button"
-                  onClick={handelJoinNow}
+                  onClick={handleJoinNow}
                 >
                   {" "}
                   Join Now
@@ -75,7 +72,7 @@ const NavHeader = (props) => {
           </div>
         </div>
       </nav>
-      {isModalOpen && <JoinNow isModalOpen={isModalOpen} />}
+      {isModalOpen && <JoinNow closeModal={closeModal} />}
       {isLogInModalOpen && <LogIn setIsLogInModalOpen={setIsLogInModalOpen}/>}
     </div>
   );
