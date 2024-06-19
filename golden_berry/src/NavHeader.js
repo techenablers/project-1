@@ -76,7 +76,7 @@ const NavHeader = (props) => {
         </div>
       </nav>
       {isModalOpen && <JoinNow />}
-      {isLogInModalOpen && <LogIn />}
+      {isLogInModalOpen && <LogIn setIsLogInModalOpen={setIsLogInModalOpen}/>}
     </div>
   );
 };
