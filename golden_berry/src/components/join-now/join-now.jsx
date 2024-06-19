@@ -18,6 +18,7 @@ const JoinNow = ({ isModalOpen, closeModal }) => {
 
   return (
     <div className="modal">
+      <div className="modal-dialog modal-dialog-centered">
       <div className="modal-content">
         <div className="modal-header">
           <span className="closeBtn" onClick={closeModal}>
@@ -53,6 +54,7 @@ const JoinNow = ({ isModalOpen, closeModal }) => {
             <button type="submit" className="join-now proceed">Proceed</button>
           </form>
         </div>
+      </div>
       </div>
     </div>
   );
