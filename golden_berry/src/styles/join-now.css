@@ -29,6 +29,8 @@
 .joinForm {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  min-width: 400px;
 }
 
 label {
@@ -93,4 +95,10 @@ option {
 
 .proceed {
   margin: 0 auto 0 0 !important;
+}
+
+.modal-body{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
