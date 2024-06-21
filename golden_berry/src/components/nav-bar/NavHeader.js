@@ -3,6 +3,7 @@ import logo from "../../assets/logo.png";
 import JoinNow from "../join-now/join-now";
 import LogIn from "../login/LogIn";
 import "../../styles/porfile-page.css";
+import CustomModal from "../../common/CustomModal";
 
 const NavHeader = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -74,6 +75,7 @@ const NavHeader = () => {
       </nav>
       {isModalOpen && <JoinNow closeModal={closeModal} />}
       {isLogInModalOpen && <LogIn setIsLogInModalOpen={setIsLogInModalOpen}/>}
+      {/* {isLogInModalOpen && <CustomModal/>} */}
     </div>
   );
 };

@@ -31,11 +31,11 @@ const LogIn = (props) => {
     console.log("i am logging in out ");
   };
   return (
-    <div className="modal-container">
-      <h1 className="modal-heading" style={{ color: "#E5881B "}}>
+    <div className="modal-container" style={{zIndex:'-1'}}>
+      <h1 className="modal-heading" style={{ color: "#E5881B ",zIndex:"1"}} tabindex="10">
         GOLDEN BERRY
       </h1>
-      <div className="modal">
+      <div className="modal" >
         <div className="modal-content">
           <div className="modal-header">
             <span className="closeBtn" onClick={handleClose}>
