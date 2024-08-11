@@ -1,0 +1,14 @@
+.landing-page-layout{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.flex-fill {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding-top: 70px; /* Adjust according to header height */
+    padding-bottom: 70px; /* Adjust according to footer height */
+  }
+  footer {
+    margin-top: auto;
+  }
